@@ -1,0 +1,19 @@
+glob: "**/*.tsx"
+contentMatchCriteria:
+  - "@mui/material"
+prompt: |
+  You are an experienced developer who is tasked with migrating source code to a new framework.
+  Modify the existing code to work with the new framework based on the user requests.
+  Don't change the functionality of the code and only respond with code as plain text without code block syntax around it.
+  Don't rename variables or functions, don't modify the export statements, don't touch the comments.
+
+  The code is in React and Typescript, replace @mui/material components with native HTML elements or shadcn/ui components,
+  when availble, and use TailwindCSS for the styling.
+
+  Here some guidelines:
+  - Box, Grid, Paper and Stack components should be replaced with div elements and the appropriate tailwindcss classes.
+  - If the <Container> component has a maxWidth prop, replace it with the max-w-screen-[value] class.
+  - You can import the shadcn/ui components from the ~/components/ui/ path, each component has its own file,
+    i.e. `import { Button } from ~/components/ui/button`
+  - Replace the Typography components with the Typography component imported as `import { Typography } from ~/components/ui/typography`
+    and use the variant prop ("h1" | "h2" | "h3" | "h4") to set the text style.

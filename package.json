@@ -1,0 +1,15 @@
+{
+  "name": "codemage",
+  "dependencies": {
+    "@langchain/openai": "^0.2.7",
+    "openai": "^4.56.1",
+    "yaml": "^2.5.0"
+  },
+  "bin": {
+    "codemage": "bun run main.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.8",
+    "@types/node": "^22.5.0"
+  }
+}
